@@ -1,40 +1,41 @@
 import React, { Component } from 'react'
-// import Unicorn from './image/Unicorn'
 
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
 
 export default class HornedBeasts extends Component {
-    
-    constructor(props){
-    super(props)
-    this.title = "UniWhal"; 
-    this.imageUrl = "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg";  // I think that I need to put anther child
-    this.description = "A unicorn and a narwhal nuzzling their horns";
-    }
 
-//  this.title = title; 
-//  this.imageUrl = imageUrl; 
-//  this.description = description;
-//  this.keyword = keyword; 
-//  this.horns = horns;
+   constructor(props){
+       super(props);
+       this.state = {
+         likes: 0 
+       }
+   }
 
+//    addLike = () =>{
+//        this.setState({like: this.state.like + 1}); // this is going to change the number o0f like 
+//     //    this. 
+//    }
     render() {
         return (
             <div>
-               {/* <h1> Jerrod </h1>  */}
-               {/* I think that what ever I out in this is going to render to the parent main */}
-
-
-
-              <h1>{this.title}</h1>
-              {/* <Unicorn/> */}
-              <p>{this.description}</p>
-              
-               
-               
-            
-
+        <Card 
+        style={{ width: '18rem' }}
+        bg="dark"
+        text="light"
+        onClick={this.addFavorite}
+        >
+            <Card.Img variant="top" src={this.props.src} />
+            <Card.Body>
+            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Text>
+                ❤️ = {this.state.favorites}
+            </Card.Text>
+            <Card.Text>
+                {this.props.description}
+            </Card.Text>
+            </Card.Body>
+        </Card>
             </div>
         )
     }

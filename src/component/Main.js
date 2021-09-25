@@ -1,34 +1,37 @@
-// this need to have at least two copies of a component called HornedBeasts.-->
-
-//  this.title = title; 
-//  this.imageUrl = imageUrl; 
-//  this.description = description;
-//  this.keyword = keyword; 
-//  this.horns = horns;
-         
-   import React from 'react'
-   import HornedBeasts from './HornedBeasts'
+import React, { Component } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HornedBeast from './HornedBeasts';
+import CardColumns from 'react-bootstrap/CardColumns';
+import rowData from './data.json'
 
 
-   export const Main = () => {
-       return (
-           <div>
-               {/* I think that I need to say what is that the img are  */}
 
-            <HornedBeasts />
-
-
-            {/* console.log(); */}
-
-           </div>
-       )
-   }
-   
+console.log(rowData);
 
 
 
 
 
+export default class Main extends Component {
 
-
-
+ 
+    render() {
+        return (
+            <div>
+        <CardColumns>
+        {this.props.everyBeast.map((horned, idx) => (
+          <HornedBeast 
+            key={idx}
+            index={idx}
+            src={horned.image_url}// this what get my pictures up on the website (show)
+            title={horned.title}
+            description={horned.description}
+            displayAsModal={this.props.displayAsModal}
+          />
+        ))}
+        </CardColumns>
+            </div>
+        )
+  
+    }
+}

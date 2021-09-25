@@ -1,26 +1,54 @@
-// import logo from './logo.svg';
-import './App.css';
+
+// import './App.css';
+import React, { Component } from 'react';
 import Header from './component/Header';
+import Main from './component/Main';
 import Footer from './component/Footer';
-import { Main } from './component/Main';
+import rowData from './component/data.json';
+import selectedHorned from './component/selectedHorned';
 
 
 
 
-function App() {
-  return (
+export default class App extends Component {
+ 
+  constructor(props){
+    super(props);
+    this.state = {
+      everyBeast: rowData, 
+      displayModal:false, 
+      selectedHorned:{},
+    }
+  }
+
+  displayAsName = (name) => {
+    const selectedHorned = rowData.find( horned => horned.title === name); 
+    this.setState({selectedHorned, displayModal: true });
+  }
+
+
+
+
+  render() {
+    return (
+  
     <div className="App">
-     {/* <h1> Hello </h1> */}
-     <Header/>
+   
+     <Header />
 
-      <Main/>
+     <Main
+     
+     everyBeast={this.state.everyBeast} // I know this will make my  website render everything from the rowData 
+     displayAsName = {this.displayAsName}
+    //  displayFilteredImage =
+     
+     
+     
+     /> 
+    {/* this has hornedBeast*/}
+    <Footer/>
 
-     <Footer/>
-
-
-
-   </div>
-  );
+      </div>
+    )
+  }
 }
-
-export default App;
