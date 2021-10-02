@@ -19,12 +19,19 @@ export default class App extends Component {
       displayModal:false, 
       selectedHorned:{},
     }
+    console.log(this.everyBeast);
   }
+
+
 
   displayAsName = (name) => {
     const selectedHorned = rowData.find( horned => horned.title === name); 
     this.setState({selectedHorned, displayModal: true });
+    // console.log( selectedHorned);
+  
   }
+
+
     handleClose = () => {
       this.setStates({displayModal: false});
     } //this is here to handle the close 
@@ -44,7 +51,7 @@ export default class App extends Component {
      <Main
      
      everyBeast={this.state.everyBeast} // I know this will make my  website render everything from the rowData 
-    //  displayAsName = {this.displayAsName}
+     displayAsName = {this.displayAsName}
      displayFilteredImage = {this.updateEveryHornedBeast}
      
      /> 
