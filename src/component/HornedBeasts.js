@@ -21,7 +21,7 @@ export default class HornedBeasts extends Component {
         })
      })
 
-       //this.props.displayAsModal(this.props.title); 
+       this.props.displayAsName(this.props.title); 
         console.log(this.state.likes);//put console.logs in the method
         
    }
@@ -29,7 +29,7 @@ export default class HornedBeasts extends Component {
     render() {
         return (
             <div>
-        <Card // this is the style is for the boxs
+        <Card // this is the style is for the box's
         style={{ width: '20rem' }}
         bg="dark"
         text="light"
@@ -60,6 +60,3 @@ export default class HornedBeasts extends Component {
 
 
 
-function dog(hair){
-
-}

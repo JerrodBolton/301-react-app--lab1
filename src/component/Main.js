@@ -26,7 +26,7 @@ export default class Main extends Component {
             src={horned.image_url}// this what get my pictures up on the website (show)
             title={horned.title}
             description={horned.description}
-            displayAsModal={this.props.displayAsModal}
+            displayAsName={this.props.displayAsName}
           />
         ))}
         </CardColumns>

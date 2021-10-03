@@ -28,12 +28,14 @@ export default class App extends Component {
     const selectedHorned = rowData.find( horned => horned.title === name); 
     this.setState({selectedHorned, displayModal: true });
     // console.log( selectedHorned);
-  
+   
+  //  console.log("hello");
+   
   }
 
 
     handleClose = () => {
-      this.setStates({displayModal: false});
+      this.setState({displayModal: false});
     } //this is here to handle the close 
 
     // I need to update all the beasts on my website.
