@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
@@ -12,9 +11,21 @@ export default class HornedBeasts extends Component {
    }
 
    addLike = () =>{
-       this.setState({like: this.state.like + 1}); // this is going to change the number o0f like 
-    //    this.props.displayAsModal(this.props.title); 
+
+
+       
+     this.setState (() => {
+        return({
+            likes: this.state.likes + 1
+            // this is going to change the number o0f like 
+        })
+     })
+
+       //this.props.displayAsModal(this.props.title); 
+        console.log(this.state.likes);//put console.logs in the method
+        
    }
+       
     render() {
         return (
             <div>
@@ -24,18 +35,31 @@ export default class HornedBeasts extends Component {
         text="light"
         onClick={this.addLike} 
         >
-            <Card.Img variant="top" src={this.props.src} />
+        
+            <Card.Img onClick={this.addLike} 
+            variant="top" src={this.props.src} />
             <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
-                ❤️ = {this.state.favorites}
+                ❤️ = {this.state.likes}
             </Card.Text>
             <Card.Text>
                 {this.props.description}
             </Card.Text>
             </Card.Body>
         </Card>
+    
             </div>
+
+        
+            
         )
     }
+}
+
+
+
+
+function dog(hair){
+
 }

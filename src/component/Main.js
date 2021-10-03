@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HornedBeast from './HornedBeasts';
 import CardColumns from 'react-bootstrap/CardColumns';
-import rowData from './data.json'
+// import rowData from './data.json'
 
 
 
-console.log(rowData);
+// console.log(rowData);
 
 
 

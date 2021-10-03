@@ -19,7 +19,7 @@ export default class App extends Component {
       displayModal:false, 
       selectedHorned:{},
     }
-    console.log(this.everyBeast);
+    // console.log(this.state.everyBeast);
   }
 
 
