@@ -11,9 +11,6 @@ export default class HornedBeasts extends Component {
    }
 
    addLike = () =>{
-
-
-       
      this.setState (() => {
         return({
             likes: this.state.likes + 1
