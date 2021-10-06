@@ -7,7 +7,7 @@ import rowData from './data.json'
 
 
 
-// console.log(rowData);
+
 
 
 
@@ -20,7 +20,6 @@ export default class Main extends Component {
     let photos = rowData;
     if(numHorns){ 
        photos = rowData.filter((make) => make.horns === numHorns);
-    
     
     }
    this.props.displayFilteredImage(photos);
