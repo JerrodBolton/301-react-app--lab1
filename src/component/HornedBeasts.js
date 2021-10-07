@@ -19,7 +19,8 @@ export default class HornedBeasts extends Component {
      })
 
        this.props.displayAsName(this.props.title); 
-        console.log(this.state.likes);//put console.logs in the method
+        
+       console.log(this.state.likes);//put console.logs in the method
         
    }
        
