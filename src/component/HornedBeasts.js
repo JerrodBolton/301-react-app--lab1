@@ -19,14 +19,13 @@ export default class HornedBeasts extends Component {
      })
 
        this.props.displayAsName(this.props.title); 
-        
        console.log(this.state.likes);//put console.logs in the method
         
    }
        
     render() {
         return (
-            <div>
+        <div>
         <Card // this is the style is for the box's
         style={{ width: '20rem' }}
         bg="dark"
