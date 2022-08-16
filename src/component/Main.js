@@ -6,13 +6,6 @@ import {Form} from 'react-bootstrap'
 import rowData from './data.json'
 
 
-
-
-
-
-
-
-
 export default class Main extends Component {
 
   filter = (e) =>{
@@ -41,14 +34,6 @@ export default class Main extends Component {
             </Form.Control>
           </Form.Group>
         </Form>
-
-        
-
-
-
-
-
-
 
         <CardColumns>
         {this.props.everyBeast.map((horned, idx) => (
