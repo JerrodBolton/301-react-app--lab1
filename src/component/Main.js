@@ -21,7 +21,7 @@ export default class Main extends Component {
 
     render() {
         return (
-        <>
+        <div>
          <Form>
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label>How Many Horns?</Form.Label>
@@ -47,7 +47,7 @@ export default class Main extends Component {
           />
         ))}
         </CardColumns>
-            </>
+            </div>
         )
   
     }
